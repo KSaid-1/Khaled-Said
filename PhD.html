@@ -6,6 +6,7 @@
         <head>
             <title>Research - Khaled Said</title>
             <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+            <meta name="viewport" content="width=device-width, initial-scale=1" />
             <meta name="description" content="" />
             <meta name="keywords" content="" />
             <!--[if lte IE 8]><script src="js/html5shiv.js"></script><![endif]-->
@@ -18,6 +19,40 @@
                 <link rel="stylesheet" href="css/style.css" />
                 <link rel="stylesheet" href="css/style-xlarge.css" />
             </noscript>
+            <style>
+                :root {
+                    --bg: #0b1220;
+                    --bg-elev: #111827;
+                    --card: rgba(17, 24, 39, 0.55);
+                    --text: #e5e7eb;
+                    --muted: #a1a1aa;
+                    --accent: #60a5fa;
+                    --accent2: #a78bfa;
+                }
+                html, body { background: var(--bg); color: var(--text); }
+                body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif; }
+                #header { position: sticky; top: 0; z-index: 100; background: rgba(10, 15, 25, 0.6); border-bottom: 1px solid rgba(255,255,255,0.06); backdrop-filter: saturate(180%) blur(10px); }
+                #nav ul { list-style: none; margin: 0; padding: 8px 16px; display: flex; gap: 18px; justify-content: flex-end; }
+                #nav ul li { position: relative; }
+                #nav ul li a { position: relative; color: var(--text) !important; opacity: 0.9; text-decoration: none; transition: color .2s, opacity .2s, transform .2s; font-size: 0.92rem !important; padding: 6px 10px; line-height: 1.1; border-radius: 8px; }
+                #nav ul li a:hover { opacity: 1; color: #fff !important; transform: translateY(-1px); }
+                #nav ul li a::after { content: ""; position: absolute; left: 8px; right: 8px; bottom: 4px; height: 2px; background: linear-gradient(90deg, var(--accent), var(--accent2)); transform: scaleX(0); transform-origin: left; transition: transform .25s ease; opacity: 0.9; }
+                #nav ul li a:hover::after { transform: scaleX(1); }
+                #nav ul li a.active { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); box-shadow: inset 0 0 0 1px rgba(255,255,255,0.04); }
+                section#one { padding: 80px 0; background-image: linear-gradient(180deg, rgba(11,18,32,.85), rgba(11,18,32,.95)), url('images/uq_background.jpg'), url('images/banner.jpg'), url('images/banner.png'); background-size: cover; background-position: center; background-attachment: fixed; }
+                .hero-card { background: var(--card); border: 1px solid rgba(255,255,255,0.08); box-shadow: 0 20px 50px rgba(0,0,0,.35); border-radius: 16px; padding: 28px; }
+                .image img { border-radius: 10px; box-shadow: 0 10px 30px rgba(0,0,0,.45); }
+                .major h2 { background: linear-gradient(90deg, var(--accent), var(--accent2)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+                header.container { text-align: center; margin-top: 24px; }
+                header.container h2 { color: #e5e7eb; }
+                header.container ul { list-style: none; padding-left: 0; margin: 12px 0 0; }
+                header.container ul li { display: inline-block; margin: 6px 8px; }
+                header.container ul li a { display: inline-block; padding: 8px 14px; border-radius: 999px; background: rgba(255,255,255,0.06); color: #e5e7eb; border: 1px solid rgba(255,255,255,0.08); text-decoration: none; transition: transform .15s ease, background .2s ease, color .2s ease; }
+                header.container ul li a:hover { transform: translateY(-1px); background: rgba(255,255,255,0.12); color: #fff; }
+                #footer { background: rgba(10,15,25,0.8); border-top: 1px solid rgba(255,255,255,0.06); }
+                #footer .icons a { color: #a1a1aa; }
+                #footer .icons a:hover { color: #e5e7eb; }
+            </style>
         </head>
         <body>
             
@@ -25,14 +60,14 @@
             <header id="header" class="">
                 <nav id="nav">
                     <ul>
-                        <li><a style="color:black;font-size:100%;" href="index.html">Home</a></li>
-                        <li><a style="color:black;font-size:60%;" href="Khaled_resume.pdf">CV</a></li>
-                        <!--li><a style="color:black;font-size:60%;" href="research.html">Research</a></li>-->
-                        <li><a style="color:black;font-size:60%;" href="PhD.html">PhD</a></li>
-                        <li><a style="color:black;font-size:60%;" href="publications.html">Publications</a></li>
-                        <!--li><a style="color:black;font-size:60%;" href="observations.html">Observations</a></li>-->
+                        <li><a style="color:#e2e8f0;" href="index.html">Home</a></li>
+                        <li><a style="color:#e2e8f0;" href="Khaled_resume.pdf">CV</a></li>
+                        <!--li><a style="color:#e2e8f0;" href="research.html">Research</a></li>-->
+                        <li><a style="color:#e2e8f0;" class="active" href="PhD.html">PhD</a></li>
+                        <li><a style="color:#e2e8f0;" href="publications.html">Publications</a></li>
+                        <!--li><a style="color:#e2e8f0;" href="observations.html">Observations</a></li>-->
                         <!--<li><a href="codes.html">Codes</a></li>-->
-                        <!--li><a style="color:black;font-size:60%;" href="teaching.html">Teaching</a></li>-->
+                        <!--li><a style="color:#e2e8f0;" href="teaching.html">Teaching</a></li>-->
                     </ul>
                 </nav>
             </header>
@@ -40,6 +75,7 @@
         <!-- One -->
         <section id="one" class="wrapper style1">
             <div class="container 100%">
+                <div class="hero-card">
                 <div class="row 200%">
                     <div class="12u 12u$(medium)">
                            <p>I was a joint PhD student between the University of Cape Town and CAASTRO at University of Western Australia.  I worked mainly with <a href="http://www.ast.uct.ac.za/ast/staff/renee-kraan-korteweg">Prof. Renee C. Kraan-Korteweg</a> and  <a href="http://www.ast.uct.ac.za/ast/staff/thomas-jarrett">Prof. Tom Jarrett</a>, I also spent some time working with <a href="http://www.uwa.edu.au/people/lister.staveley-smith">Prof. Lister Staveley-Smith</a> at UWA</p>
@@ -213,9 +249,12 @@ relation.
 
 <header class="container">
     <h2>My Publications on</h2>
-    <li><a href="https://ui.adsabs.harvard.edu/public-libraries/jVGtTg3JS4OczXynERzuig">ADS</a></li>
-    <li><a href="https://arxiv.org/find/astro-ph/1/au:+Said_K/0/1/0/all/0/1">ARXIV</a></li>
-    <li><a href="http://inspirehep.net/author/profile/Khaled.Said.1">INSPIRE</a></li>
+    <ul>
+        <li><a href="https://scholar.google.com.au/citations?user=V148nToAAAAJ&hl=en">Google Scholar</a></li>
+        <li><a href="https://ui.adsabs.harvard.edu/public-libraries/jVGtTg3JS4OczXynERzuig">ADS</a></li>
+        <li><a href="https://arxiv.org/search/advanced?advanced=&terms-0-operator=AND&terms-0-term=Said%2C+K&terms-0-field=author&classification-physics=y&classification-physics_archives=astro-ph">ARXIV</a></li>
+        <li><a href="http://inspirehep.net/author/profile/Khaled.Said.1">INSPIRE</a></li>
+    </ul>
                         </header>
                     </div>
                 </div>
@@ -228,6 +267,8 @@ relation.
                 <ul class="icons">
                 <li><a href="mailto:k.saidahmedsoliman@uq.edu.au" class="icon fa-envelope"></a></li>
                 <li><a href="https://twitter.com/Astro_KhaleD" class="icon fa-twitter"></a></li>
+                <li><a href="https://github.com/KSaid-1" class="icon fa-github" title="GitHub" target="_blank" rel="noopener"></a></li>
+                <li><a href="https://www.linkedin.com/in/khaled-said-b80818235/" class="icon fa-linkedin" title="LinkedIn" target="_blank" rel="noopener"></a></li>
                 </ul>
                 <ul class="copyright">
                     <li>&copy; Khaled Said</li>
